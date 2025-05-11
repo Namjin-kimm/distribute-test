@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Typography } from '@mui/material';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './App.css';
+import Router from './routes/Router';
 
 function App() {
-  const [count, setCount] = useState('NamjinKimLink')
 
   return (
     <>
-      <div>
-        <h1>Hello</h1>
-        <h2>{count}</h2>
-      </div>
+    
+    <Link to={"/board"}>
+      <Typography sx={{fontWeight: 500}}>
+        게시판
+      </Typography>
+    </Link>
+
+    <Router/>
     </>
   )
 }
